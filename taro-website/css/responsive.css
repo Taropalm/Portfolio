@@ -1,0 +1,116 @@
+/* ===== TABLET (<= 900px) ===== */
+@media (max-width: 900px) {
+  :root {
+    --section-pad: 80px;
+  }
+
+  #navbar {
+    padding: 16px 32px;
+  }
+
+  .nav-links {
+    gap: 24px;
+  }
+
+  .nav-links a {
+    font-size: 0.85rem;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .skills-grid,
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===== MOBILE (<= 640px) ===== */
+@media (max-width: 640px) {
+  :root {
+    --section-pad: 56px;
+  }
+
+  /* Navbar chuyển thành thanh gọn, ẩn label chữ, chỉ giữ logo.
+     Điều hướng chính giờ nằm ở đáy màn hình (dễ bấm bằng ngón tay). */
+  #navbar {
+    padding: 16px 20px;
+    justify-content: center;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  /* Bottom nav bar cho mobile */
+  .mobile-bottom-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    justify-content: space-around;
+    padding: 12px 8px;
+    background: rgba(10, 10, 15, 0.92);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .mobile-bottom-nav a {
+    font-family: var(--font-display);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+
+  .mobile-bottom-nav a.active {
+    color: var(--red);
+  }
+
+  body {
+    padding-bottom: 64px; /* chừa chỗ cho bottom nav */
+  }
+
+  .hero-content h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-tagline {
+    font-size: 1rem;
+  }
+
+  .hero-subtext {
+    font-size: 0.95rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .skills-grid,
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gaming-card {
+    padding: 24px;
+  }
+
+  .social-links {
+    gap: 32px;
+  }
+}
+
+/* Ẩn bottom nav trên desktop/tablet, chỉ áp dụng thật sự từ 640px trở xuống */
+.mobile-bottom-nav {
+  display: none;
+}
